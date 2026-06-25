@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physiotherapie Eichstädt – Krankengymnastik & Hausbesuche in Schleswig</title>
+<meta name="description" content="Physiotherapie Eichstädt in Schleswig – seit 27 Jahren persönlich, erfahren und nah am Menschen. Krankengymnastik, Manuelle Therapie, Lymphdrainage und Hausbesuche. Jetzt anrufen: 04621 953344.">
+<meta name="keywords" content="Physiotherapie Schleswig, Krankengymnastik Schleswig, Manuelle Therapie, Lymphdrainage, Hausbesuche Physiotherapie, Eichstädt, Physiopraxis Schleswig">
+<meta name="author" content="Physiotherapie Eichstädt">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1d4e48">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Physiotherapie Eichstädt – Schleswig">
+<meta property="og:description" content="Seit 27 Jahren persönliche Physiotherapie in Schleswig. Krankengymnastik, Manuelle Therapie, Lymphdrainage – auch als Hausbesuch.">
+<meta property="og:url" content="https://physiotherapie-eichstaedt.de/">
+<meta property="og:site_name" content="Physiotherapie Eichstädt">
+
+<link rel="canonical" href="https://physiotherapie-eichstaedt.de/">
+<!-- Favicon-Platzhalter – echtes Praxis-Logo/Icon später einsetzen -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+<!-- Schriften via Bunny Fonts (DSGVO-konform, kein Google-Hotlink). Senioren-freundlich: kräftige Serifen-Headline + klare Sans -->
+<link href="https://fonts.bunny.net/css?family=fraunces:400,500,600,600i|dm-sans:400,500,600,700&display=swap" rel="stylesheet">
+
+<!-- Schema.org – Physiotherapie-Praxis -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness","Physiotherapy"],
+  "@id": "https://physiotherapie-eichstaedt.de/#praxis",
+  "name": "Physiotherapie Eichstädt",
+  "description": "Persönliche Physiotherapie in Schleswig seit 27 Jahren: Krankengymnastik, Manuelle Therapie, Lymphdrainage und Hausbesuche.",
+  "url": "https://physiotherapie-eichstaedt.de/",
+  "telephone": "+49-4621-953344",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Heinrich-Hertz-Straße 40",
+    "postalCode": "24837",
+    "addressLocality": "Schleswig",
+    "addressRegion": "Schleswig-Holstein",
+    "addressCountry": "DE"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Schleswig" },
+    { "@type": "City", "name": "Busdorf" },
+    { "@type": "City", "name": "Fahrdorf" }
+  ],
+  "priceRange": "€€",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "4"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --petrol:#1d4e48;       /* primär – ruhiges, vertrauenswürdiges Tannengrün-Petrol */
+    --petrol-deep:#143733;
+    --sage:#6fa399;         /* sanfter Akzent */
+    --cream:#f7f3ec;        /* warmer Hintergrund */
+    --warm:#efe7d8;
+    --clay:#c4744a;         /* warmer CTA-Akzent */
+    --clay-deep:#a85e38;
+    --ink:#1b2826;          /* Text – sehr dunkel für hohen Kontrast (Senioren) */
+    --mid:#46544f;
+    --white:#ffffff;
+    --line:rgba(29,78,72,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    font-size:18px;            /* großer Basistext für gute Lesbarkeit */
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;color:var(--petrol-deep);letter-spacing:-.01em;}
+  h2{font-size:clamp(2rem,4.5vw,3.1rem);margin-bottom:.5em;}
+  h3{font-size:1.5rem;margin-bottom:.35em;}
+  p{margin-bottom:1em;color:var(--mid);max-width:62ch;}
+  a{color:var(--petrol);}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  section{padding:clamp(60px,9vw,110px) 0;}
+  .eyebrow{font-size:.95rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:14px;}
+
+  /* ===== Buttons – große Tap-Flächen ===== */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-weight:700;font-size:1.1rem;text-decoration:none;
+    padding:18px 34px;border-radius:14px;min-height:60px;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+    cursor:pointer;border:none;
+  }
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:0 10px 26px rgba(196,116,74,.32);}
+  .btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px);box-shadow:0 14px 32px rgba(196,116,74,.4);}
+  .btn-primary:active{transform:translateY(0);}
+  .btn-ghost{background:transparent;color:var(--petrol-deep);border:2px solid var(--petrol);}
+  .btn-ghost:hover{background:var(--petrol);color:#fff;}
+  :focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:6px;}
+
+  /* ===== NAV ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;height:74px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 28px;background:rgba(247,243,236,.95);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;color:var(--petrol-deep);text-decoration:none;display:flex;align-items:center;gap:9px;}
+  .nav-logo span{color:var(--clay);}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:1.02rem;}
+  .nav-links a.navlink:hover{color:var(--clay);}
+  .nav-call{background:var(--petrol);color:#fff!important;padding:11px 22px;border-radius:11px;}
+  .nav-call:hover{background:var(--petrol-deep);}
+  .nav-toggle{display:none;background:none;border:none;font-size:1.8rem;color:var(--petrol-deep);cursor:pointer;}
+
+  /* ===== HERO ===== */
+  .hero{padding-top:130px;padding-bottom:70px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;}
+  .hero h1{font-size:clamp(2.5rem,5.6vw,4.1rem);margin-bottom:.4em;}
+  .hero .lead{font-size:1.3rem;color:var(--mid);max-width:54ch;margin-bottom:1.6em;}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-badges{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap;}
+  .hero-badge{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--petrol-deep);}
+  .hero-badge .ic{font-size:1.5rem;}
+
+  /* Foto-Platzhalter (echte Fotos kommen von Frau Eichstädt) */
+  .ph{
+    position:relative;border-radius:22px;overflow:hidden;
+    background:
+      repeating-linear-gradient(135deg,rgba(29,78,72,.04) 0 14px,transparent 14px 28px),
+      linear-gradient(160deg,var(--warm),#e3d9c6);
+    border:2px dashed rgba(29,78,72,.28);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--petrol-deep);min-height:240px;
+  }
+  .ph .ph-in{padding:22px;}
+  .ph .ph-ic{font-size:2.2rem;display:block;margin-bottom:8px;}
+  .ph .ph-t{font-weight:700;}
+  .ph .ph-s{font-size:.92rem;color:var(--mid);margin-top:4px;}
+  .hero-photo{aspect-ratio:4/5;min-height:420px;box-shadow:0 24px 60px rgba(20,55,51,.18);}
+
+  /* ===== TRUST-LEISTE ===== */
+  .trust{background:var(--petrol);color:#fff;}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;}
+  .trust .num{font-family:'Fraunces',serif;font-size:2.6rem;color:#fff;line-height:1;}
+  .trust .lbl{color:rgba(255,255,255,.82);font-weight:500;margin-top:8px;font-size:1rem;}
+  .trust .stars{color:#ffd27a;font-size:1.6rem;letter-spacing:2px;}
+
+  /* ===== LEISTUNGEN ===== */
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 54px;}
+  .sec-head p{margin:0 auto;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{
+    background:var(--white);border-radius:18px;padding:34px 30px;
+    border:1px solid var(--line);box-shadow:0 6px 20px rgba(20,55,51,.05);
+    transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(20,55,51,.12);}
+  .card .ci{width:58px;height:58px;border-radius:14px;background:var(--warm);display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:18px;}
+  .card p{font-size:1.02rem;margin-bottom:0;}
+  .note{margin-top:30px;text-align:center;font-size:1rem;color:var(--mid);}
+
+  /* ===== ÜBER UNS / VITA ===== */
+  .ueber{background:var(--warm);}
+  .ueber-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center;}
+  .team-photo{aspect-ratio:1/1;min-height:360px;}
+  .person{margin-bottom:30px;}
+  .person h3{margin-bottom:.1em;}
+  .person .role{color:var(--clay);font-weight:700;margin-bottom:.5em;}
+  .vita{background:var(--white);border-radius:16px;padding:26px 30px;border:1px solid var(--line);margin-top:24px;}
+  .vita h4{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--petrol-deep);margin-bottom:12px;}
+  .vita ul{list-style:none;}
+  .vita li{padding:7px 0 7px 30px;position:relative;color:var(--mid);}
+  .vita li::before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:700;}
+
+  /* ===== HAUSBESUCHE ===== */
+  .haus .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .haus-photo{aspect-ratio:3/2;min-height:300px;}
+  .haus-list{display:grid;gap:14px;margin:22px 0 28px;}
+  .haus-list div{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:var(--petrol-deep);}
+  .haus-list .ic{color:var(--clay);font-size:1.3rem;}
+
+  /* ===== KONTAKT ===== */
+  .kontakt{background:var(--petrol-deep);color:#fff;}
+  .kontakt h2{color:#fff;}
+  .kontakt .eyebrow{color:var(--sage);}
+  .kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;}
+  .kontakt p{color:rgba(255,255,255,.8);}
+  .kinfo{display:grid;gap:18px;margin:26px 0;}
+  .kinfo a,.kinfo div{display:flex;gap:14px;align-items:center;color:#fff;text-decoration:none;font-size:1.1rem;font-weight:500;}
+  .kinfo .ic{width:46px;height:46px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+  .hours{background:rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;margin-top:8px;}
+  .hours .row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.88);}
+  .hours .row:last-child{border:none;}
+  form{display:grid;gap:14px;}
+  label{font-weight:600;color:#fff;font-size:1rem;}
+  input,textarea{
+    width:100%;padding:15px 17px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.96);color:var(--ink);font-family:inherit;font-size:1.05rem;
+  }
+  textarea{min-height:130px;resize:vertical;}
+  .form-note{font-size:.9rem;color:rgba(255,255,255,.6);}
+  .map{margin-top:46px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.15);}
+  .map iframe{width:100%;height:340px;border:0;display:block;filter:grayscale(.15);}
+  .map-consent{width:100%;min-height:340px;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:30px;background:rgba(255,255,255,.07);color:#fff;font-family:inherit;}
+  .map-consent:hover{background:rgba(255,255,255,.12);}
+  .map-consent .mc-ic{font-size:2.4rem;}
+  .map-consent .mc-t{font-weight:700;font-size:1.15rem;}
+  .map-consent .mc-s{font-size:.92rem;color:rgba(255,255,255,.65);max-width:46ch;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:46px 0 34px;text-align:center;}
+  footer .flogo{font-family:'Fraunces',serif;font-size:1.3rem;color:#fff;margin-bottom:10px;}
+  footer .legal-links{display:flex;gap:24px;justify-content:center;margin:18px 0;flex-wrap:wrap;}
+  footer .legal-links button{background:none;border:none;color:rgba(255,255,255,.75);font:inherit;font-size:1rem;cursor:pointer;text-decoration:underline;}
+  footer .legal-links button:hover{color:#fff;}
+  footer .made{font-size:.85rem;margin-top:14px;color:rgba(255,255,255,.4);}
+
+  /* ===== WhatsApp FAB ===== */
+  .wa-fab{
+    position:fixed;right:22px;bottom:22px;z-index:300;
+    width:62px;height:62px;border-radius:50%;background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(37,211,102,.45);text-decoration:none;
+    transition:transform .25s ease;
+  }
+  .wa-fab:hover{transform:scale(1.08);}
+  .wa-fab svg{width:34px;height:34px;fill:#fff;}
+
+  /* ===== LEGAL DRAWER ===== */
+  .drawer-overlay{position:fixed;inset:0;background:rgba(20,40,38,.55);backdrop-filter:blur(3px);z-index:400;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  .drawer-overlay.open{opacity:1;pointer-events:auto;}
+  .drawer{
+    position:fixed;top:0;right:-560px;width:min(560px,92vw);height:100%;
+    background:var(--cream);z-index:401;transition:right .38s cubic-bezier(.5,0,.2,1);
+    overflow-y:auto;box-shadow:-20px 0 60px rgba(0,0,0,.2);padding:30px 34px 60px;
+  }
+  .drawer.open{right:0;}
+  .drawer-close{position:sticky;top:0;float:right;background:none;border:none;font-size:2rem;color:var(--petrol-deep);cursor:pointer;line-height:1;}
+  .drawer h2{font-size:1.9rem;}
+  .drawer h3{font-size:1.2rem;margin-top:1.4em;}
+  .drawer p,.drawer li{font-size:1rem;color:var(--mid);}
+  .drawer ul{margin:0 0 1em 1.2em;}
+  .ph-legal{background:#fff4e0;border:1px dashed var(--clay);border-radius:8px;padding:4px 8px;color:var(--clay-deep);font-weight:600;font-size:.92rem;}
+
+  /* ===== COOKIE ===== */
+  .cookie{position:fixed;left:22px;bottom:22px;z-index:310;max-width:340px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 14px 40px rgba(20,55,51,.18);font-size:.95rem;}
+  .cookie p{font-size:.95rem;margin-bottom:12px;}
+  .cookie button{background:var(--petrol);color:#fff;border:none;padding:10px 20px;border-radius:10px;font-weight:700;cursor:pointer;}
+
+  /* ===== Reveal ===== */
+  .reveal{opacity:0;transform:translateY(28px);}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:880px){
+    .nav-links{position:fixed;top:74px;right:0;width:min(300px,80vw);height:calc(100vh - 74px);background:var(--cream);flex-direction:column;align-items:flex-start;gap:6px;padding:28px;transform:translateX(110%);transition:transform .35s ease;border-left:1px solid var(--line);}
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{font-size:1.15rem;padding:10px 0;width:100%;}
+    .nav-toggle{display:block;}
+    .hero-grid,.ueber-grid,.haus .wrap,.kontakt-grid{grid-template-columns:1fr;gap:36px;}
+    .trust .wrap{grid-template-columns:repeat(2,1fr);gap:34px;}
+    .cards{grid-template-columns:1fr;}
+    .hero-photo{order:-1;min-height:340px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <a href="#home" class="nav-logo">Physiotherapie <span>Eichstädt</span></a>
+  <button class="nav-toggle" aria-label="Menü öffnen" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#leistungen" class="navlink">Leistungen</a>
+    <a href="#ueber" class="navlink">Über uns</a>
+    <a href="#hausbesuche" class="navlink">Hausbesuche</a>
+    <a href="#kontakt" class="navlink">Kontakt</a>
+    <a href="tel:+494621953344" class="nav-call">📞 04621 953344</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow reveal">Seit 27 Jahren in Schleswig</p>
+      <!-- HERO-SPRUCH: Frau Eichstädt wünscht eigenen Spruch + Roller-Motiv. Platzhalter-Text bitte ersetzen. -->
+      <h1 class="reveal">Bewegung, die gut tut.<br>Ganz persönlich.</h1>
+      <p class="lead reveal">Erfahrene Physiotherapie in Schleswig – mit Zeit, Ruhe und einem offenen Ohr. In der Praxis oder bei Ihnen zu Hause.</p>
+      <div class="hero-cta reveal">
+        <a href="tel:+494621953344" class="btn btn-primary">📞 Termin anrufen</a>
+        <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
+      </div>
+      <div class="hero-badges reveal">
+        <div class="hero-badge"><span class="ic">⭐</span> 5,0 Sterne bei Google</div>
+        <div class="hero-badge"><span class="ic">🏠</span> Hausbesuche möglich</div>
+        <div class="hero-badge"><span class="ic">🅿️</span> Parkplätze vor der Tür</div>
+      </div>
+    </div>
+    <!-- HERO-FOTO: echtes Foto (Roller-Motiv) kommt von Frau Eichstädt -->
+    <div class="ph hero-photo reveal">
+      <div class="ph-in">
+        <span class="ph-ic">📷</span>
+        <div class="ph-t">Hero-Foto</div>
+        <div class="ph-s">Roller-Motiv von Frau Eichstädt<br>(kommt von ihr)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="trust" style="padding:46px 0;">
+  <div class="wrap">
+    <div><div class="num">27</div><div class="lbl">Jahre Erfahrung</div></div>
+    <div><div class="stars">★★★★★</div><div class="lbl">5,0 bei Google</div></div>
+    <div><div class="num">🏠</div><div class="lbl">Hausbesuche</div></div>
+    <div><div class="num">🅿️</div><div class="lbl">Parken direkt vor der Tür</div></div>
+  </div>
+</section>
+
+<!-- ============ LEISTUNGEN (NUR OFFIZIELLES – HWG-konform) ============ -->
+<!-- WICHTIG (HWG): Hier nur Leistungen nennen, die offiziell beworben werden dürfen.
+     Graubereich-Können (Cranio, Osteopathische Techniken, Kinesiologie, Fußreflexzonen)
+     steht bewusst NICHT hier, sondern unten unter "Über uns / Qualifikation" als Aus-/Fortbildung.
+     Frau Eichstädt bestätigt noch, was direkt rein darf. -->
+<section class="leistungen" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Unsere Leistungen</p>
+      <h2 class="reveal">Therapie mit Erfahrung und Zeit</h2>
+      <p class="reveal">Jede Behandlung beginnt mit Zuhören. Wir nehmen uns die Zeit, die Sie und Ihr Körper brauchen.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ci">🤸</div><h3>Krankengymnastik</h3><p>Gezielte Übungen und Behandlung zur Wiederherstellung von Beweglichkeit, Kraft und Funktion – auf Rezept und individuell abgestimmt.</p></div>
+      <div class="card reveal"><div class="ci">✋</div><h3>Manuelle Therapie</h3><p>Sanfte, gezielte Mobilisation von Gelenken und Muskulatur bei Schmerzen und Bewegungseinschränkungen.</p></div>
+      <div class="card reveal"><div class="ci">💧</div><h3>Manuelle Lymphdrainage</h3><p>Entstauende Behandlung zur Anregung des Lymphflusses – wohltuend bei Schwellungen und nach Operationen.</p></div>
+      <div class="card reveal"><div class="ci">🧠</div><h3>PNF &amp; Bobath</h3><p>Neurophysiologische Behandlungskonzepte zur Förderung von Bewegung und Koordination.</p></div>
+      <div class="card reveal"><div class="ci">💆</div><h3>Massagetherapie</h3><p>Klassische Massage zur Lockerung verspannter Muskulatur und zur Entspannung.</p></div>
+      <div class="card reveal"><div class="ci">🏠</div><h3>Hausbesuche</h3><p>Therapie bei Ihnen zu Hause, wenn der Weg in die Praxis schwerfällt – zuverlässig und in vertrauter Umgebung.</p></div>
+    </div>
+    <p class="note">Sie sind unsicher, was zu Ihnen passt? <a href="tel:+494621953344"><strong>Rufen Sie uns einfach an</strong></a> – wir beraten Sie gern.</p>
+  </div>
+</section>
+
+<!-- ============ ÜBER UNS / QUALIFIKATION (VITA – hier darf das volle Können stehen) ============ -->
+<section class="ueber" id="ueber">
+  <div class="wrap ueber-grid">
+    <!-- TEAM-FOTO: echtes Foto kommt von Frau Eichstädt -->
+    <div class="ph team-photo reveal">
+      <div class="ph-in"><span class="ph-ic">📷</span><div class="ph-t">Team-Foto</div><div class="ph-s">Gunnar &amp; Monika Eichstädt<br>(Foto von der Praxis)</div></div>
+    </div>
+    <div>
+      <p class="eyebrow reveal">Über uns</p>
+      <h2 class="reveal">Vertraute Gesichter,<br>echte Erfahrung</h2>
+      <p class="reveal">Seit 27 Jahren sind wir in Schleswig für unsere Patientinnen und Patienten da. Bei uns sind Sie kein Fall auf einer Liste – sondern ein Mensch, den wir kennen.</p>
+
+      <div class="person reveal">
+        <h3>Gunnar Eichstädt</h3>
+        <div class="role">Praxisinhaber &amp; Physiotherapeut</div>
+        <p>Inhaber der Praxis und seit vielen Jahren mit Herz und Erfahrung in der Behandlung tätig.</p>
+        <!-- TEXT von Gunnar bestätigen: Tätigkeitsschwerpunkte / Werdegang -->
+      </div>
+
+      <div class="person reveal">
+        <h3>Monika Eichstädt</h3>
+        <div class="role">Physiotherapeutin &amp; Heilpraktikerin (Physiotherapie)</div>
+        <p>Langjährige Physiotherapeutin der Praxis – bekannt für ihre einfühlsame, gründliche Art.</p>
+        <div class="vita">
+          <h4>Aus- &amp; Fortbildungen</h4>
+          <!-- HWG-VERPACKUNG: Das Graubereich-Können hier als Qualifikation darstellen (zeigt Kompetenz, ohne Behandlung zu bewerben).
+               Frau Eichstädt schickt gescannte Vita-PDF + sagt an, was direkt rein darf und was "verpackt" wird. Liste unten = Platzhalter. -->
+          <ul>
+            <li>Osteopathische &amp; Manuelle Techniken</li>
+            <li>Craniosacrale Verfahren</li>
+            <li>Kinesiologie</li>
+            <li>Fußreflexzonen</li>
+            <li>Manuelle Lymphdrainage</li>
+            <li>PNF &amp; Bobath</li>
+          </ul>
+          <p style="font-size:.92rem;margin:0;"><span class="ph-legal">Vita wird nach Eingang der PDF final formuliert</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HAUSBESUCHE (prominent – Kundenwunsch) ============ -->
+<section class="haus" id="hausbesuche">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow reveal">Therapie zu Hause</p>
+      <h2 class="reveal">Wir kommen zu Ihnen</h2>
+      <p class="reveal">Wenn der Weg in die Praxis schwerfällt, bringen wir die Therapie zu Ihnen nach Hause – in Ihrer vertrauten Umgebung, ohne Stress und ohne Anfahrt.</p>
+      <div class="haus-list reveal">
+        <div><span class="ic">✓</span> Für Menschen mit eingeschränkter Mobilität</div>
+        <div><span class="ic">✓</span> Nach Operationen oder Krankenhausaufenthalt</div>
+        <div><span class="ic">✓</span> In vertrauter, ruhiger Umgebung</div>
+        <div><span class="ic">✓</span> Zuverlässig und pünktlich</div>
+      </div>
+      <a href="tel:+494621953344" class="btn btn-primary reveal">📞 Hausbesuch anfragen</a>
+    </div>
+    <!-- FOTO: Hausbesuch-Situation (von der Praxis) -->
+    <div class="ph haus-photo reveal"><div class="ph-in"><span class="ph-ic">📷</span><div class="ph-t">Foto Hausbesuch</div><div class="ph-s">kommt von Frau Eichstädt</div></div></div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kontakt-grid">
+      <div>
+        <p class="eyebrow">Kontakt &amp; Termine</p>
+        <h2 class="reveal">So erreichen Sie uns</h2>
+        <p class="reveal">Am schnellsten geht es telefonisch. Wir freuen uns auf Sie.</p>
+        <div class="kinfo reveal">
+          <a href="tel:+494621953344"><span class="ic">📞</span> 04621 953344</a>
+          <!-- WhatsApp-Nummer bestätigen: aktuell Monika +49 1520 6184628. Soll die öffentlich auf die Seite? -->
+          <a href="https://wa.me/4915206184628"><span class="ic">💬</span> WhatsApp schreiben</a>
+          <div><span class="ic">📍</span> Heinrich-Hertz-Straße 40, 24837 Schleswig</div>
+          <!-- Instagram-Profil ist bisher nicht öffentlich auffindbar – Link einsetzen, sobald vorhanden -->
+          <a href="#" id="ig-link"><span class="ic">📸</span> Wir auf Instagram</a>
+        </div>
+        <div class="hours reveal">
+          <!-- ÖFFNUNGSZEITEN bestätigen – unten Platzhalter -->
+          <div class="row"><span>Montag – Donnerstag</span><span>08:00 – 18:00 Uhr</span></div>
+          <div class="row"><span>Freitag</span><span>08:00 – 14:00 Uhr</span></div>
+          <div class="row"><span>Termine</span><span>nach Vereinbarung</span></div>
+          <div class="row"><span style="color:#ffd27a;">⚠︎ Öffnungszeiten</span><span style="color:#ffd27a;">noch bestätigen</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:#fff;margin-bottom:14px;">Rückruf anfordern</h3>
+        <!-- Formspree mlgpooqw = VALORIS-Sammelpostfach. Vor Live auf Praxis-Postfach umstellen. -->
+        <form action="https://formspree.io/f/mlgpooqw" method="POST">
+          <label for="name">Ihr Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="tel">Telefonnummer</label>
+          <input type="tel" id="tel" name="telefon" required>
+          <label for="msg">Ihr Anliegen</label>
+          <textarea id="msg" name="nachricht" placeholder="Worum geht es? Wann erreichen wir Sie am besten?"></textarea>
+          <button type="submit" class="btn btn-primary" style="justify-content:center;">Absenden</button>
+          <p class="form-note">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung Ihrer Anfrage zu. Details in der Datenschutzerklärung.</p>
+        </form>
+      </div>
+    </div>
+    <div class="map reveal" id="mapBox">
+      <button class="map-consent" id="mapConsent" type="button">
+        <span class="mc-ic">🗺️</span>
+        <span class="mc-t">Karte von Google Maps anzeigen</span>
+        <span class="mc-s">Beim Anzeigen werden Daten an Google übertragen. Adresse: Heinrich-Hertz-Straße 40, 24837 Schleswig.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="flogo">Physiotherapie Eichstädt</div>
+    <p style="margin:0;">Heinrich-Hertz-Straße 40 · 24837 Schleswig · 📞 04621 953344</p>
+    <div class="legal-links">
+      <button data-drawer="impressum">Impressum</button>
+      <button data-drawer="datenschutz">Datenschutz</button>
+    </div>
+    <p style="margin:0;">© <span id="year"></span> Physiotherapie Eichstädt</p>
+    <p class="made">Erstellt von VALORIS Webdesign &amp; SEO</p>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/4915206184628" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.8 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3 1.3 1.3-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.6 4.6-10.2 10.2-10.2s10.2 4.6 10.2 10.2-4.6 10.2-10.3 10.2zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.700000000000003.2 .4-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<!-- Cookie -->
+<div class="cookie" id="cookie">
+  <p>Diese Website nutzt nur technisch notwendige Cookies. Eingebettete Karten von Google werden erst beim Anzeigen geladen.</p>
+  <button id="cookieOk">Verstanden</button>
+</div>
+
+<!-- LEGAL DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Schließen">×</button>
+
+  <div class="drawer-content" data-content="impressum" style="display:none;">
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 TMG</h3>
+    <p>
+      Physiotherapie Eichstädt<br>
+      Inhaber: Gunnar Eichstädt<br>
+      Heinrich-Hertz-Straße 40<br>
+      24837 Schleswig
+    </p>
+    <h3>Kontakt</h3>
+    <p>Telefon: 04621 953344<br>E-Mail: <span class="ph-legal">E-Mail-Adresse einsetzen</span></p>
+    <h3>Berufsrechtliche Angaben</h3>
+    <p>
+      Berufsbezeichnung: Physiotherapeut (verliehen in der Bundesrepublik Deutschland)<br>
+      <span class="ph-legal">Heilpraktiker-Erlaubnis (Physiotherapie) – zuständige Behörde bestätigen</span><br>
+      Zuständige Aufsichtsbehörde: <span class="ph-legal">zuständiges Gesundheitsamt / Kreis Schleswig-Flensburg eintragen</span>
+    </p>
+    <h3>Umsatzsteuer</h3>
+    <p>Heilbehandlungen sind gemäß § 4 Nr. 14 UStG von der Umsatzsteuer befreit.</p>
+    <h3>Streitschlichtung</h3>
+    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <h3>Haftung für Inhalte</h3>
+    <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+  </div>
+
+  <div class="drawer-content" data-content="datenschutz" style="display:none;">
+    <h2>Datenschutzerklärung</h2>
+    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG).</p>
+    <h3>Verantwortlicher</h3>
+    <p>Gunnar Eichstädt · Physiotherapie Eichstädt · Heinrich-Hertz-Straße 40 · 24837 Schleswig · 04621 953344</p>
+    <h3>Kontaktaufnahme</h3>
+    <p>Wenn Sie uns per Formular, Telefon oder WhatsApp kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage und für mögliche Anschlussfragen gespeichert. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.</p>
+    <h3>Gesundheitsdaten</h3>
+    <p>Im Rahmen der Behandlung verarbeiten wir besondere Kategorien personenbezogener Daten (Gesundheitsdaten) gemäß Art. 9 Abs. 2 lit. h DSGVO. Diese werden vertraulich behandelt und unterliegen der Schweigepflicht.</p>
+    <h3>Kontaktformular (Formspree)</h3>
+    <p>Das Kontaktformular wird über den Dienst Formspree verarbeitet. <span class="ph-legal">Vor Live: auf Praxis-Postfach umstellen + AVV prüfen.</span></p>
+    <h3>Google Maps</h3>
+    <p>Die Karte wird über Google Maps eingebunden. Beim Anzeigen können Daten an Google übertragen werden.</p>
+    <h3>Ihre Rechte</h3>
+    <ul>
+      <li>Auskunft über Ihre gespeicherten Daten</li>
+      <li>Berichtigung unrichtiger Daten</li>
+      <li>Löschung Ihrer Daten</li>
+      <li>Einschränkung der Verarbeitung</li>
+      <li>Beschwerde bei einer Aufsichtsbehörde</li>
+    </ul>
+  </div>
+</aside>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  // Footer-Jahr dynamisch
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile-Menü
+  const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+  navToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+  // Cookie
+  const cookie=document.getElementById('cookie');
+  if(localStorage.getItem('eichstaedt_cookie')) cookie.style.display='none';
+  document.getElementById('cookieOk').addEventListener('click',()=>{localStorage.setItem('eichstaedt_cookie','1');cookie.style.display='none';});
+
+  // Legal Drawer
+  const drawer=document.getElementById('drawer'), overlay=document.getElementById('drawerOverlay');
+  function openDrawer(which){
+    document.querySelectorAll('.drawer-content').forEach(c=>c.style.display='none');
+    document.querySelector('.drawer-content[data-content="'+which+'"]').style.display='block';
+    drawer.classList.add('open'); overlay.classList.add('open'); drawer.scrollTop=0;
+  }
+  function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('open');}
+  document.querySelectorAll('[data-drawer]').forEach(b=>b.addEventListener('click',()=>openDrawer(b.dataset.drawer)));
+  document.getElementById('drawerClose').addEventListener('click',closeDrawer);
+  overlay.addEventListener('click',closeDrawer);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+
+  // Karte erst auf Klick laden (DSGVO – kein Google-Aufruf vor Einwilligung)
+  const mapConsent=document.getElementById('mapConsent');
+  if(mapConsent){
+    mapConsent.addEventListener('click',()=>{
+      const f=document.createElement('iframe');
+      f.loading='lazy'; f.title='Standort Physiotherapie Eichstädt';
+      f.src='https://www.google.com/maps?q=Heinrich-Hertz-Stra%C3%9Fe%2040%2C%2024837%20Schleswig&output=embed';
+      const box=document.getElementById('mapBox'); box.innerHTML=''; box.appendChild(f);
+    });
+  }
+
+  // Reveals (reduced-motion-sicher)
+  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!reduce && window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.reveal').forEach(el=>{
+      gsap.to(el,{opacity:1,y:0,duration:.8,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 88%'}});
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity=1;el.style.transform='none';});
+  }
+</script>
+</body>
+</html>
