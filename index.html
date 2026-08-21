@@ -131,6 +131,71 @@
   .frame .deco .pulse{width:54px;height:30px;}
   .frame .deco .pulse path{stroke:rgba(255,255,255,.5);}
 
+
+  /* ══ EDITORIAL-TIEFE (21.08.2026) ══ */
+
+  /* Bild bricht aus dem Raster – rechte Seite läuft in den Anschnitt */
+  @media(min-width:960px){
+    .hero-grid{grid-template-columns:1.02fr 1.06fr;gap:clamp(40px,5vw,74px);}
+    .hero-grid > .frame{margin-right:calc((100vw - min(1160px,100vw))/-2 + 8px);
+      aspect-ratio:auto;height:min(76vh,660px);border-radius:24px 0 0 24px;}
+    .ueber-grid{grid-template-columns:.94fr 1.06fr;}
+    .ueber .frame{margin-left:calc((100vw - min(1160px,100vw))/-2 + 10px);
+      border-radius:0 24px 24px 0;height:min(78vh,700px);aspect-ratio:auto;}
+  }
+  /* Parallax-Spielraum: Bild etwas größer als der Rahmen */
+  .frame.par img{height:118%;top:-9%;}
+
+  /* ── Statement-Band: ein großer Satz, der die Seite atmen lässt ── */
+  .statement{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:clamp(72px,10vw,132px) 0;position:relative;overflow:hidden;}
+  .statement .wrap{max-width:1000px;}
+  .statement .mark{font-family:'Newsreader',serif;font-size:clamp(4rem,11vw,8rem);line-height:.7;
+    color:var(--ochre);opacity:.34;display:block;margin-bottom:-.12em;}
+  .statement p{font-family:'Newsreader',serif;font-size:clamp(1.7rem,3.5vw,2.9rem);line-height:1.28;
+    color:var(--forest-deep);letter-spacing:-.012em;}
+  .statement p em{font-style:italic;color:var(--ochre-d);}
+  .statement .by{margin-top:26px;font-size:1.02rem;color:var(--muted);letter-spacing:.02em;}
+  .statement .by b{color:var(--ink);font-weight:700;}
+
+  /* ── Prozess-Pfad: So läuft Ihr Termin ab ── */
+  .ablauf{background:var(--bg);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;counter-reset:st;}
+  .step{position:relative;padding:38px 26px 34px 0;border-top:2px solid var(--line-strong);}
+  .step + .step{padding-left:26px;}
+  .step::before{counter-increment:st;content:counter(st,decimal-leading-zero);
+    position:absolute;top:-1.05em;left:0;font-family:'Newsreader',serif;font-size:2.1rem;
+    color:var(--ochre);background:var(--bg);padding-right:14px;line-height:1;}
+  .step + .step::before{left:26px;}
+  .step h3{font-size:1.24rem;margin-bottom:.42em;}
+  .step p{font-size:1.04rem;color:var(--muted);line-height:1.62;}
+  .step .dur{display:inline-block;margin-top:14px;font-size:.92rem;color:var(--ochre-d);font-weight:600;}
+  @media(max-width:900px){
+    .steps{grid-template-columns:1fr;gap:34px;}
+    .step,.step + .step{padding:52px 0 8px 0;}
+    .step::before,.step + .step::before{left:0;top:-.62em;font-size:1.9rem;}
+  }
+
+  /* ── Anfahrt & Parken: zwei ungleiche Spalten ── */
+  .anfahrt{background:var(--bg-2);border-top:1px solid var(--line);}
+  .anfahrt .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,72px);align-items:start;}
+  .weg{list-style:none;}
+  .weg li{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:flex-start;}
+  .weg li:last-child{border-bottom:none;}
+  .weg .ico{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:rgba(33,68,58,.08);
+    display:grid;place-items:center;margin-top:2px;}
+  .weg .ico svg{width:19px;height:19px;fill:none;stroke:var(--forest);stroke-width:1.7;
+    stroke-linecap:round;stroke-linejoin:round;}
+  .weg b{display:block;font-size:1.1rem;margin-bottom:.22em;}
+  .weg span{color:var(--muted);font-size:1.02rem;line-height:1.6;}
+  .gebiet{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 28px;}
+  .gebiet h3{font-size:1.18rem;margin-bottom:.7em;}
+  .gebiet .orte{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px;}
+  .gebiet .orte span{font-size:.97rem;padding:7px 14px;border-radius:100px;
+    background:rgba(33,68,58,.07);color:var(--forest);font-weight:600;}
+  .gebiet p{font-size:1rem;color:var(--muted);line-height:1.6;}
+  @media(max-width:900px){.anfahrt .wrap{grid-template-columns:1fr;}}
+
   /* ── TRUST-Zeile (kein Box-Raster, keine Emoji) ── */
   .facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .facts .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;padding-top:26px;padding-bottom:26px;}
@@ -308,6 +373,7 @@
   <div class="nav-links" id="navLinks">
     <a href="#leistungen" class="navlink">Leistungen</a>
     <a href="#ueber" class="navlink">Über uns</a>
+    <a href="#ablauf" class="navlink">Ablauf</a>
     <a href="#hausbesuche" class="navlink">Hausbesuche</a>
     <a href="#kontakt" class="navlink">Kontakt</a>
     <a href="tel:+494621953344" class="nav-call"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>04621 953344</a>
@@ -327,7 +393,7 @@
         <a href="#leistungen" class="btn btn-out">Leistungen ansehen</a>
       </div>
     </div>
-    <div class="frame reveal-l">
+    <div class="frame par reveal-l">
       <img src="assets/hero-roller.jpg" alt="Monika Eichstädt auf ihrem Roller – unterwegs zu einem Hausbesuch in Schleswig" width="1100" height="1375" fetchpriority="high" decoding="async">
       <div class="scrim"></div>
       <div class="deco"><svg class="pulse" viewBox="0 0 30 18"><path d="M1 10h5l2.5-7 3.5 14 2.5-9 1.5 2.5H29"/></svg></div>
@@ -368,10 +434,20 @@
   </div>
 </section>
 
+<!-- ============ STATEMENT ============ -->
+<section class="statement">
+  <div class="wrap">
+    <span class="mark reveal">&bdquo;</span>
+    <p class="reveal">Manche Wege sind kurz. Manche gehen wir mit &ndash;
+       und wenn der Weg zu uns zu weit wird, <em>kommen wir eben zu Ihnen.</em></p>
+    <div class="by reveal"><b>Mobile Physiotherapie nach dem Bobath&shy;konzept</b> &middot; Praxis Eichstädt, Schleswig</div>
+  </div>
+</section>
+
 <!-- ============ ÜBER UNS ============ -->
 <section class="ueber" id="ueber">
   <div class="wrap ueber-grid">
-    <div class="frame reveal-l">
+    <div class="frame par reveal-l">
       <img src="assets/praxis-gunnar.jpg" alt="Gunnar Eichstädt bei einer Behandlung an der Sprossenwand in der Praxis in Schleswig" width="900" height="1200" loading="lazy" decoding="async">
       <div class="scrim"></div>
       <div class="cap"><div class="k">Gunnar Eichstädt</div><div class="s">Behandlung in der Praxis in Schleswig</div></div>
@@ -412,6 +488,39 @@
   </div>
 </section>
 
+<!-- ============ ABLAUF ============ -->
+<section class="ablauf" id="ablauf">
+  <div class="wrap">
+    <div class="lead-head reveal">
+      <div class="rule"></div>
+      <h2>So läuft Ihr<br>erster Termin ab</h2>
+      <p>Damit Sie wissen, was Sie erwartet – und nichts organisieren müssen, außer einem Anruf.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal-l">
+        <h3>Sie rufen an</h3>
+        <p>Ein Anruf genügt. Wir hören zu, klären kurz, worum es geht, und finden gemeinsam einen Termin, der Ihnen passt.</p>
+        <span class="dur">04621 953344</span>
+      </div>
+      <div class="step reveal-l">
+        <h3>Rezept mitbringen</h3>
+        <p>Haben Sie eine Verordnung vom Arzt, bringen Sie sie einfach mit. Ohne Rezept behandeln wir Sie als Selbstzahler – auch das ist möglich.</p>
+        <span class="dur">Kasse &amp; privat</span>
+      </div>
+      <div class="step reveal-l">
+        <h3>Wir schauen genau hin</h3>
+        <p>Beim ersten Termin nehmen wir uns Zeit für Befund und Gespräch: Wo tut es weh, was ging früher leichter, was ist Ihr Ziel?</p>
+        <span class="dur">In Ruhe, ohne Hektik</span>
+      </div>
+      <div class="step reveal-l">
+        <h3>Behandlung beginnt</h3>
+        <p>Sie bekommen eine Behandlung, die zu Ihnen passt – und Übungen für zu Hause, wenn sie Ihnen helfen. Nicht mehr, als Sie schaffen.</p>
+        <span class="dur">Immer dieselben Hände</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ HAUSBESUCHE ============ -->
 <section class="haus" id="hausbesuche">
   <div class="wrap">
@@ -429,10 +538,48 @@
       </div>
       <a href="tel:+494621953344" class="btn btn-light reveal-l"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>Hausbesuch anfragen</a>
     </div>
-    <div class="frame reveal-l">
+    <div class="frame par reveal-l">
       <img src="assets/behandlung-haende.jpg" alt="Behandlung mit den Händen – Physiotherapie mit Ruhe und Zeit" width="900" height="900" loading="lazy" decoding="async">
       <div class="scrim"></div>
       <div class="cap"><div class="k">Mit Ruhe und Zeit</div><div class="s">Behandlung in vertrauter Umgebung</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANFAHRT ============ -->
+<section class="anfahrt" id="anfahrt">
+  <div class="wrap">
+    <div>
+      <div class="lead-head reveal" style="margin-bottom:34px;">
+        <div class="rule"></div>
+        <h2>Ankommen,<br>ohne zu suchen</h2>
+        <p>Die Praxis liegt in der Heinrich-Hertz-Straße 40 in Schleswig.</p>
+      </div>
+      <ul class="weg">
+        <li class="reveal-l">
+          <span class="ico"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span>
+          <div><b>Parkplätze direkt vor der Tür</b>
+          <span>Sie müssen keinen Parkplatz suchen und keine Strecke laufen – halten Sie einfach direkt vor dem Haus.</span></div>
+        </li>
+        <li class="reveal-l">
+          <span class="ico"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></span>
+          <div><b>Wenn der Weg zu weit ist</b>
+          <span>Dann kommen wir zu Ihnen nach Hause. Sagen Sie am Telefon einfach Bescheid – wir richten es ein.</span></div>
+        </li>
+        <li class="reveal-l">
+          <span class="ico"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>
+          <div><b>Lieber vorher fragen?</b>
+          <span>Rufen Sie an, wir beschreiben Ihnen den Weg. <a href="tel:+494621953344">04621 953344</a></span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="gebiet reveal-l">
+      <h3>Hausbesuche in Schleswig<br>und Umgebung</h3>
+      <div class="orte">
+        <span>Schleswig</span><span>Busdorf</span><span>Fahrdorf</span>
+        <span>Jagel</span><span>Umgebung</span>
+      </div>
+      <p>Sie wohnen etwas weiter draußen? Fragen Sie trotzdem – <span class="ph-legal">Einzugsgebiet bitte bestätigen</span></p>
     </div>
   </div>
 </section>
@@ -564,8 +711,8 @@
   </div>
 </aside>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -618,6 +765,20 @@
         {opacity:1,y:0,scale:1,duration:.85,ease:'expo.out',
          scrollTrigger:{trigger:el,start:'top 90%'}});
     });
+    // Parallax: Bild wandert langsamer als die Seite – gibt Tiefe, ohne zu zappeln
+    gsap.utils.toArray('.frame.par').forEach(fr=>{
+      const im=fr.querySelector('img'); if(!im) return;
+      gsap.fromTo(im,{yPercent:-6},{yPercent:6,ease:'none',
+        scrollTrigger:{trigger:fr,start:'top bottom',end:'bottom top',scrub:.8}});
+    });
+    // Statement-Band: der Satz zieht beim Scrollen sanft mit
+    gsap.utils.toArray('.statement p').forEach(el=>{
+      gsap.fromTo(el,{y:24},{y:-24,ease:'none',
+        scrollTrigger:{trigger:el.closest('.statement'),start:'top bottom',end:'bottom top',scrub:1}});
+    });
+    // Prozess-Pfad: Schritte laufen nacheinander ein
+    gsap.fromTo('.steps .step',{opacity:0,y:30},{opacity:1,y:0,duration:.7,stagger:.13,ease:'expo.out',
+      scrollTrigger:{trigger:'.steps',start:'top 85%'}});
     // Sicherheitsnetz: falls ScrollTrigger nicht greift, nichts bleibt blank
     ScrollTrigger.refresh();
     setTimeout(()=>{document.querySelectorAll('.reveal,.reveal-l').forEach(el=>{
