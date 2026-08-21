@@ -313,10 +313,19 @@
   .ph-legal{background:rgba(191,132,58,.14);border:1px dashed var(--ochre);border-radius:7px;padding:2px 8px;color:var(--ochre-d);font-weight:600;font-size:.9rem;}
 
   /* ── COOKIE ── */
-  .cookie{position:fixed;left:22px;bottom:22px;z-index:var(--z-cookie);max-width:340px;background:#fff;border:1px solid var(--line);
-    border-radius:16px;padding:20px 22px;box-shadow:0 16px 44px rgba(22,46,39,.2);font-size:.95rem;}
-  .cookie p{font-size:.94rem;margin-bottom:13px;color:var(--muted);}
-  .cookie button{background:var(--forest);color:#fff;border:none;padding:11px 22px;border-radius:10px;font-weight:700;cursor:pointer;}
+  /* Cookie-Hinweis als schmale Leiste unten – verdeckt keinen CTA */
+  .cookie{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-cookie);background:#fff;
+    border-top:1px solid var(--line);box-shadow:0 -10px 34px rgba(22,46,39,.13);
+    padding:16px clamp(18px,4vw,34px);display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+    justify-content:center;font-size:.95rem;}
+  .cookie p{font-size:1rem;margin:0;color:var(--muted);max-width:70ch;}
+  .cookie button{background:var(--forest);color:#fff;border:none;padding:13px 28px;border-radius:10px;
+    font-weight:700;font-size:1rem;cursor:pointer;flex:0 0 auto;}
+  @media(max-width:640px){
+    .cookie{padding-bottom:20px;gap:14px;}
+    .cookie p{font-size:.96rem;}
+    .cookie button{width:100%;}
+  }
 
   .reveal{opacity:0;transform:translateY(26px);}
   .reveal-l{opacity:0;transform:translateY(20px);}
