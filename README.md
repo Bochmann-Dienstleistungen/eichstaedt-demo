@@ -14,8 +14,10 @@ Self-contained One-Pager `index.html`, seniorenfreundlich (großer Text, hoher K
 - **Über uns / Vita** = Graubereich-Können als Aus-/Fortbildung verpackt (Cranio, Osteopathische Techniken, Kinesiologie, Fußreflexzonen) — zeigt Kompetenz ohne Werbeverstoß.
 
 ## Offen / zu bestätigen (im Code als Platzhalter markiert)
-- [ ] **Echte Fotos** von Frau Eichstädt: Hero (Roller-Motiv), Team (Gunnar & Monika), Hausbesuch → Platzhalter ersetzen + lokal self-hosten (DSGVO)
-- [ ] **Hero-Spruch** (ihr Wunschspruch) statt Platzhalter-Headline
+- [x] **Echte Fotos eingebaut (21.08.2026)** – self-gehostet in `assets/`: Hero = Roller-Motiv (Monika, ihr Wunschmotiv), Über uns = Gunnar bei der Behandlung, Hausbesuche = Behandlung an der Sprossenwand. Quelle: ihre WhatsApp-Bilder (`~/Desktop/eichstädt bilder`).
+- [ ] **⚠️ Foto-Einwilligung klären:** auf beiden Praxisfotos ist eine Patientin zu sehen (nur von hinten, nicht erkennbar – Spiegelbilder wurden weggeschnitten). Vor Live: Monika bestätigen lassen, dass die Patientin mit der Verwendung einverstanden ist.
+- [ ] **Porträt Monika** (Gesicht, ruhig) fehlt noch – aktuell nur das Roller-Motiv mit Helm.
+- [ ] **Hero-Spruch** (ihr Wunschspruch) statt der aktuellen Headline „Bewegung, die gut tut."
 - [ ] **Vita-PDF** abwarten → finale Formulierung, was direkt rein darf vs. „verpackt"
 - [ ] **Öffnungszeiten** bestätigen (aktuell Platzhalter)
 - [ ] **WhatsApp-Nummer** freigeben (soll Monikas Nummer öffentlich auf die Seite?)

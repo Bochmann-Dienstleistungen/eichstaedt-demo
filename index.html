@@ -121,6 +121,9 @@
     background:linear-gradient(155deg,var(--forest),var(--forest-deep));
     box-shadow:0 30px 70px rgba(22,46,39,.28);display:flex;align-items:flex-end;}
   .frame::after{content:"";position:absolute;inset:14px;border:1.5px solid rgba(191,132,58,.55);border-radius:12px;pointer-events:none;}
+  .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .frame .scrim{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to top,rgba(16,36,29,.82) 0%,rgba(16,36,29,.38) 38%,rgba(16,36,29,.06) 70%);}
   .frame .cap{position:relative;z-index:2;padding:30px;color:rgba(255,255,255,.86);}
   .frame .cap .k{font-family:'Newsreader',serif;font-style:italic;font-size:1.25rem;color:#fff;margin-bottom:4px;}
   .frame .cap .s{font-size:.92rem;color:rgba(255,255,255,.6);}
@@ -324,10 +327,11 @@
         <a href="#leistungen" class="btn btn-out">Leistungen ansehen</a>
       </div>
     </div>
-    <!-- HERO-FOTO: echtes Foto (Roller-Motiv) von Frau Eichstädt ersetzt diesen Rahmen -->
     <div class="frame reveal-l">
+      <img src="assets/hero-roller.jpg" alt="Monika Eichstädt auf ihrem Roller – unterwegs zu einem Hausbesuch in Schleswig" width="1100" height="1375" fetchpriority="high" decoding="async">
+      <div class="scrim"></div>
       <div class="deco"><svg class="pulse" viewBox="0 0 30 18"><path d="M1 10h5l2.5-7 3.5 14 2.5-9 1.5 2.5H29"/></svg></div>
-      <div class="cap"><div class="k">Ihr Praxis-Foto folgt</div><div class="s">Roller-Motiv – kommt von Frau Eichstädt</div></div>
+      <div class="cap"><div class="k">Unterwegs zu Ihnen</div><div class="s">Monika Eichstädt auf dem Weg zum Hausbesuch</div></div>
     </div>
   </div>
 </section>
@@ -367,9 +371,10 @@
 <!-- ============ ÜBER UNS ============ -->
 <section class="ueber" id="ueber">
   <div class="wrap ueber-grid">
-    <!-- TEAM-FOTO: echtes Foto kommt von der Praxis -->
     <div class="frame reveal-l">
-      <div class="cap"><div class="k">Gunnar &amp; Monika Eichstädt</div><div class="s">Foto folgt von der Praxis</div></div>
+      <img src="assets/praxis-gunnar.jpg" alt="Gunnar Eichstädt bei einer Behandlung an der Sprossenwand in der Praxis in Schleswig" width="900" height="1200" loading="lazy" decoding="async">
+      <div class="scrim"></div>
+      <div class="cap"><div class="k">Gunnar Eichstädt</div><div class="s">Behandlung in der Praxis in Schleswig</div></div>
     </div>
     <div>
       <div class="lead-head reveal" style="margin-bottom:38px;">
@@ -424,9 +429,10 @@
       </div>
       <a href="tel:+494621953344" class="btn btn-light reveal-l"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>Hausbesuch anfragen</a>
     </div>
-    <!-- FOTO Hausbesuch von der Praxis -->
     <div class="frame reveal-l">
-      <div class="cap"><div class="k">Therapie zu Hause</div><div class="s">Foto folgt von der Praxis</div></div>
+      <img src="assets/behandlung-haende.jpg" alt="Behandlung mit den Händen – Physiotherapie mit Ruhe und Zeit" width="900" height="900" loading="lazy" decoding="async">
+      <div class="scrim"></div>
+      <div class="cap"><div class="k">Mit Ruhe und Zeit</div><div class="s">Behandlung in vertrauter Umgebung</div></div>
     </div>
   </div>
 </section>
