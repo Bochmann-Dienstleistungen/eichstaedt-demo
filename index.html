@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physiotherapie Eichstädt – Krankengymnastik & Hausbesuche in Schleswig</title>
-<meta name="description" content="Physiotherapie Eichstädt in Schleswig – seit über 27 Jahren persönlich, erfahren und nah am Menschen. Krankengymnastik, Manuelle Therapie, Lymphdrainage und Hausbesuche. Jetzt anrufen: 04621 953344.">
+<meta name="description" content="Physiotherapie Eichstädt in Schleswig – seit über 30 Jahren persönlich und erfahren. Krankengymnastik, Manuelle Therapie, Lymphdrainage, Massage und Fango, Skoliosebehandlung und Hausbesuche. Jetzt anrufen: 04621 953344.">
 <meta name="keywords" content="Physiotherapie Schleswig, Krankengymnastik Schleswig, Manuelle Therapie, Lymphdrainage, Hausbesuche Physiotherapie, Eichstädt">
 <meta name="author" content="Physiotherapie Eichstädt">
 <meta name="robots" content="noindex, nofollow">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Physiotherapie Eichstädt – Schleswig">
-<meta property="og:description" content="Seit über 27 Jahren persönliche Physiotherapie in Schleswig. Krankengymnastik, Manuelle Therapie, Lymphdrainage – auch als Hausbesuch.">
+<meta property="og:description" content="Seit über 30 Jahren persönliche Physiotherapie in Schleswig. Krankengymnastik, Manuelle Therapie, Lymphdrainage – auch als Hausbesuch.">
 <meta property="og:url" content="https://physiotherapie-eichstaedt.de/">
 <meta property="og:site_name" content="Physiotherapie Eichstädt">
 <!-- Vorschaubild für WhatsApp/Facebook. VOR LIVE: URL auf https://physiotherapie-eichstaedt.de/assets/og-bild.jpg umstellen -->
@@ -33,10 +33,16 @@
   "@context":"https://schema.org","@type":["MedicalBusiness","Physiotherapy"],
   "@id":"https://physiotherapie-eichstaedt.de/#praxis",
   "name":"Physiotherapie Eichstädt",
-  "description":"Persönliche Physiotherapie in Schleswig seit über 27 Jahren: Krankengymnastik, Manuelle Therapie, Lymphdrainage und Hausbesuche.",
-  "url":"https://physiotherapie-eichstaedt.de/","telephone":"+49-4621-953344",
+  "description":"Persönliche Physiotherapie in Schleswig seit über 30 Jahren: Krankengymnastik, Manuelle Therapie, Lymphdrainage, Massage und Fango, Skoliosebehandlung und Hausbesuche.",
+  "url":"https://physiotherapie-eichstaedt.de/","telephone":"+49-4621-953344","email":"monikabiene@googlemail.com",
+  "sameAs":["https://www.instagram.com/physioeichstaedt.schleswig/"],
   "address":{"@type":"PostalAddress","streetAddress":"Heinrich-Hertz-Straße 40","postalCode":"24837","addressLocality":"Schleswig","addressRegion":"Schleswig-Holstein","addressCountry":"DE"},
-  "areaServed":[{"@type":"City","name":"Schleswig"},{"@type":"City","name":"Busdorf"},{"@type":"City","name":"Fahrdorf"}],
+  "areaServed":[{"@type":"City","name":"Schleswig"}],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday"],"opens":"08:00","closes":"12:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday"],"opens":"15:00","closes":"19:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Friday"],"opens":"08:00","closes":"12:00"}
+  ],
   "priceRange":"€€",
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"4"}
 }
@@ -110,7 +116,16 @@
   .nav-toggle span{display:block;width:26px;height:2.4px;background:var(--forest-deep);margin:5px auto;border-radius:2px;transition:.3s;}
 
   /* ── HERO ── */
-  .hero{position:relative;padding-top:150px;padding-bottom:90px;overflow:hidden;}
+  /* grünes Band direkt unter der Nav (Wunsch Frau Eichstädt: Weißraum füllen) */
+  .topband{margin-top:76px;background:var(--forest);color:#fff;position:relative;z-index:2;}
+  .topband .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 26px;
+    padding-top:15px;padding-bottom:15px;font-size:1.02rem;font-weight:500;text-align:center;}
+  .topband span{display:inline-flex;align-items:center;gap:10px;}
+  .topband span + span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ochre);margin-right:16px;}
+  .topband a{color:#fff;font-weight:700;text-decoration:none;}
+  .topband a:hover{text-decoration:underline;text-underline-offset:4px;}
+  @media(max-width:640px){.topband span + span::before{display:none;}.topband .wrap{flex-direction:column;gap:4px;}}
+  .hero{position:relative;padding-top:64px;padding-bottom:90px;overflow:hidden;}
   .hero::before{content:"";position:absolute;top:-160px;right:-160px;width:620px;height:620px;border-radius:50%;
     background:radial-gradient(circle,rgba(33,68,58,.10),transparent 65%);pointer-events:none;}
   .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;}
@@ -120,7 +135,8 @@
   .hero h1{font-size:clamp(2.7rem,6vw,4.6rem);margin-bottom:.32em;}
   .hero h1 em{font-style:italic;font-weight:500;color:var(--forest);}
   .hero .lead{font-size:1.32rem;color:var(--muted);max-width:52ch;margin-bottom:1.7em;}
-  .hero-cta{display:flex;gap:15px;flex-wrap:wrap;}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .hero-cta .btn{padding-left:24px;padding-right:24px;}
 
   /* designter Foto-Rahmen (kein gestricheltes „Bild fehlt") */
   .frame{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;
@@ -195,11 +211,9 @@
   .weg b{display:block;font-size:1.1rem;margin-bottom:.22em;}
   .weg span{color:var(--muted);font-size:1.02rem;line-height:1.6;}
   .gebiet{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 28px;}
-  .gebiet h3{font-size:1.18rem;margin-bottom:.7em;}
-  .gebiet .orte{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px;}
-  .gebiet .orte span{font-size:.97rem;padding:7px 14px;border-radius:100px;
-    background:rgba(33,68,58,.07);color:var(--forest);font-weight:600;}
-  .gebiet p{font-size:1rem;color:var(--muted);line-height:1.6;}
+  .gebiet{display:flex;gap:18px;align-items:center;}
+  .gebiet svg{width:40px;height:40px;flex:0 0 auto;fill:none;stroke:var(--ochre);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .gebiet h3{font-size:1.35rem;margin:0;}
   @media(max-width:900px){.anfahrt .wrap{grid-template-columns:1fr;}}
 
   /* ── TRUST-Zeile (kein Box-Raster, keine Emoji) ── */
@@ -217,10 +231,10 @@
 
   /* ── LEISTUNGEN als redaktionelle Liste (keine identischen Cards) ── */
   .svc{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;}
-  .svc .item{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line);align-items:start;}
+  .svc .item{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line);align-items:center;}
   .svc .item .ico{width:42px;height:42px;color:var(--forest);margin-top:3px;}
   .svc .item .ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .svc .item h3{margin-bottom:.18em;}
+  .svc .item h3{margin:0;}
   .svc .item p{font-size:1.04rem;margin:0;}
   .svc .item.feat{grid-column:1 / -1;border-top:2px solid var(--forest);background:linear-gradient(100deg,rgba(33,68,58,.05),transparent 70%);
     border-radius:0 0 16px 0;padding:30px 26px 30px 0;}
@@ -240,7 +254,7 @@
   .vita ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;}
   .vita li{position:relative;padding-left:24px;color:var(--muted);font-size:1rem;}
   .vita li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ochre);}
-  .vita .hint{grid-column:1/-1;margin-top:8px;font-size:.9rem;color:var(--ochre-d);font-style:italic;}
+  .person .born{display:block;font-size:.98rem;color:var(--muted);margin-top:-.3em;}
 
   /* ── HAUSBESUCHE (committed: volle Markenfläche, Rhythmus) ── */
   .haus{background:var(--forest-deep);color:#fff;position:relative;overflow:hidden;}
@@ -270,14 +284,9 @@
   .hours{background:rgba(255,255,255,.06);border-radius:14px;padding:8px 22px;margin-top:18px;}
   .hours .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.88);}
   .hours .row:last-child{border:none;}
-  .hours .warn{color:var(--ochre);}
-  form{display:grid;gap:15px;}
-  label{font-weight:600;color:#fff;font-size:.98rem;}
-  input,textarea{width:100%;padding:15px 17px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);
-    background:rgba(255,255,255,.96);color:var(--ink);font-family:inherit;font-size:1.05rem;transition:border-color .25s;}
-  input:focus,textarea:focus{border-color:var(--ochre);outline:none;}
-  textarea{min-height:128px;resize:vertical;}
-  .form-note{font-size:.88rem;color:rgba(255,255,255,.6);}
+  .hours .row span:first-child{font-weight:600;color:#fff;}
+  .hours-note{margin-top:16px;font-size:1.02rem;color:rgba(255,255,255,.8);}
+  .hours-note b{color:#fff;}
   .map{margin-top:50px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.15);}
   .map iframe{width:100%;height:340px;border:0;display:block;filter:grayscale(.12);}
   .map-consent{width:100%;min-height:300px;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;
@@ -369,6 +378,7 @@
   <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 10.5A6 6 0 0 1 6 13.5C6 9.5 12 3 12 3Z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
   <symbol id="i-nerve" viewBox="0 0 24 24"><path d="M5 4c0 4 4 4 4 8s-4 4-4 8"/><path d="M19 4c0 4-4 4-4 8s4 4 4 8"/><circle cx="5" cy="4" r="1.4"/><circle cx="19" cy="20" r="1.4"/><path d="M9 12h6"/></symbol>
   <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 19c-4 0-7-2.5-7-2.5S7 11 12 11s7 5.5 7 5.5S16 19 12 19Z"/><path d="M12 11c-2-2-2-5 0-7 2 2 2 5 0 7Z"/><path d="M12 12c-3-1-5 .5-6.5 2.5M12 12c3-1 5 .5 6.5 2.5"/></symbol>
+  <symbol id="i-spine" viewBox="0 0 24 24"><path d="M12 3c-1.5 2.5 1.5 4 0 6.5s1.5 4 0 6.5 1.5 3.5 0 5"/><path d="M9 5.5h6M8.5 9.5h6.5M9 13.5h6M8.5 17.5h6.5"/></symbol>
   <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
@@ -395,24 +405,34 @@
   </div>
 </nav>
 
+<!-- ── Grünes Band ── -->
+<div class="topband">
+  <div class="wrap">
+    <span>Termine nach Vereinbarung</span>
+    <span>Hausbesuche in Schleswig und Umgebung</span>
+    <span><a href="tel:+494621953344">04621 953344</a></span>
+  </div>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="hero" id="home">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag reveal"><i></i> Physiotherapie in Schleswig · seit über 27 Jahren</span>
-      <!-- HERO-SPRUCH: Wunschspruch von Frau Eichstädt einsetzen (sie wünscht Spruch + Roller-Motiv) -->
-      <h1 class="reveal">Bewegung, die <em>gut tut.</em><br>Ganz persönlich.</h1>
+      <span class="tag reveal"><i></i> Physiotherapie in Schleswig · seit über 30 Jahren</span>
+      <!-- HERO-SPRUCH von Frau Eichstädt (20.10.2026) -->
+      <h1 class="reveal">Behandlung ist <em>Chefsache.</em></h1>
       <p class="lead reveal">Erfahrene Physiotherapie mit Zeit, Ruhe und einem offenen Ohr – in unserer Praxis oder bei Ihnen zu Hause.</p>
       <div class="hero-cta reveal">
-        <a href="tel:+494621953344" class="btn btn-primary"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>Termin anrufen</a>
+        <a href="tel:+494621953344" class="btn btn-primary"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>Termin vereinbaren</a>
         <a href="#leistungen" class="btn btn-out">Leistungen ansehen</a>
       </div>
     </div>
+    <!-- HERO-FOTO: Platzhalter bis Foto „Gunnar + Monika vor dem Haus" kommt (angekündigt 20.10.) -->
     <div class="frame par reveal-l">
-      <img src="assets/hero-roller.jpg" alt="Monika Eichstädt auf ihrem Roller – unterwegs zu einem Hausbesuch in Schleswig" width="1100" height="1375" fetchpriority="high" decoding="async">
+      <img src="assets/behandlung-haende.jpg" alt="Behandlung in der Praxis Eichstädt in Schleswig" width="900" height="900" fetchpriority="high" decoding="async">
       <div class="scrim"></div>
       <div class="deco"><svg class="pulse" viewBox="0 0 30 18"><path d="M1 10h5l2.5-7 3.5 14 2.5-9 1.5 2.5H29"/></svg></div>
-      <div class="cap"><div class="k">Unterwegs zu Ihnen</div><div class="s">Monika Eichstädt auf dem Weg zum Hausbesuch</div></div>
+      <div class="cap"><div class="k">Mit Ruhe und Zeit</div><div class="s">Physiotherapie Eichstädt, Schleswig</div></div>
     </div>
   </div>
 </section>
@@ -420,7 +440,7 @@
 <!-- ── Trust-Zeile ── -->
 <div class="facts">
   <div class="wrap">
-    <span class="fact"><b>27</b> Jahre in Schleswig</span><span class="dot"></span>
+    <span class="fact"><b>30</b> Jahre in Schleswig</span><span class="dot"></span>
     <span class="fact"><span class="stars">★★★★★</span> 5,0 bei Google</span><span class="dot"></span>
     <span class="fact">Hausbesuche möglich</span><span class="dot"></span>
     <span class="fact">Parkplätze direkt vor der Tür</span>
@@ -428,22 +448,23 @@
 </div>
 
 <!-- ============ LEISTUNGEN ============ -->
-<!-- HWG: hier NUR offiziell Bewerbbares. Graubereich (Cranio, Osteopathie, Kinesiologie, Fußreflexzonen)
-     steht bewusst unten unter „Über uns / Aus- & Fortbildungen". Frau Eichstädt bestätigt finale Liste. -->
+<!-- HWG: hier NUR offiziell Bewerbbares. Osteopathie/Cranio/Kinesiologie etc. stehen bewusst
+     nur in den Fortbildungen unter „Über uns" (Gunnar ohne HP → Osteopathie nicht als Leistung bewerben). -->
 <section class="leistungen" id="leistungen">
   <div class="wrap">
     <div class="lead-head reveal">
       <div class="rule"></div>
       <h2>Therapie mit Erfahrung und Zeit</h2>
-      <p>Jede Behandlung beginnt mit Zuhören. Wir nehmen uns die Zeit, die Sie und Ihr Körper brauchen.</p>
+      <p>Jede Behandlung beginnt mit einem Befund. Wir nehmen uns die Zeit dafür.</p>
     </div>
     <div class="svc">
-      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-kg"/></svg></span><div><h3>Krankengymnastik</h3><p>Gezielte Übungen und Behandlung für Beweglichkeit, Kraft und Funktion – auf Rezept, individuell abgestimmt.</p></div></div>
-      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-hand"/></svg></span><div><h3>Manuelle Therapie</h3><p>Sanfte, gezielte Mobilisation von Gelenken und Muskulatur bei Schmerz und Bewegungseinschränkung.</p></div></div>
-      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-drop"/></svg></span><div><h3>Manuelle Lymphdrainage</h3><p>Entstauende Behandlung zur Anregung des Lymphflusses – wohltuend bei Schwellungen und nach Operationen.</p></div></div>
-      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-nerve"/></svg></span><div><h3>PNF &amp; Bobath</h3><p>Neurophysiologische Konzepte zur Förderung von Bewegung, Gleichgewicht und Koordination.</p></div></div>
-      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-lotus"/></svg></span><div><h3>Massagetherapie</h3><p>Klassische Massage zur Lockerung verspannter Muskulatur und zur Entspannung.</p></div></div>
-      <div class="item feat reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></span><div><h3>Hausbesuche</h3><p>Wenn der Weg in die Praxis schwerfällt, kommen wir zu Ihnen – zuverlässig, in vertrauter Umgebung. Mehr dazu weiter unten.</p></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-kg"/></svg></span><div><h3>Krankengymnastik</h3></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-hand"/></svg></span><div><h3>Manuelle Therapie</h3></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-drop"/></svg></span><div><h3>Manuelle Lymphdrainage</h3></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-nerve"/></svg></span><div><h3>PNF &amp; Bobath</h3></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-lotus"/></svg></span><div><h3>Massage und Fango</h3></div></div>
+      <div class="item reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-spine"/></svg></span><div><h3>Skoliosebehandlung</h3></div></div>
+      <div class="item feat reveal-l"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></span><div><h3>Hausbesuche</h3></div></div>
     </div>
     <p class="svc-note">Unsicher, was zu Ihnen passt? <a href="tel:+494621953344">Rufen Sie uns einfach an</a> – wir beraten Sie in Ruhe.</p>
   </div>
@@ -454,7 +475,7 @@
   <div class="wrap">
     <span class="mark reveal">&bdquo;</span>
     <p class="reveal">Manche Wege sind kurz. Manche gehen wir mit &ndash;
-       und wenn der Weg zu uns zu weit wird, <em>kommen wir eben zu Ihnen.</em></p>
+       und wenn der Weg zu uns nicht möglich ist, <em>kommen wir eben zu Ihnen.</em></p>
     <div class="by reveal"><b>Mobile Physiotherapie nach dem Bobath&shy;konzept</b> &middot; Praxis Eichstädt, Schleswig</div>
   </div>
 </section>
@@ -471,31 +492,41 @@
       <div class="lead-head reveal" style="margin-bottom:38px;">
         <div class="rule"></div>
         <h2>Vertraute Gesichter,<br>echte Erfahrung</h2>
-        <p>Seit über 27 Jahren sind wir in Schleswig für unsere Patientinnen und Patienten da. Bei uns sind Sie kein Fall auf einer Liste – sondern ein Mensch, den wir kennen.</p>
+        <p>Seit über 30 Jahren sind wir in Schleswig für unsere Patientinnen und Patienten da. Bei uns sind Sie kein Fall auf einer Liste – sondern ein Mensch, den wir kennen.</p>
       </div>
 
+      <!-- VITA von Frau Eichstädt (20.10.2026). Bewusst nur Jahrgang statt vollem Geburtsdatum. -->
       <div class="person reveal-l">
         <h3>Gunnar Eichstädt</h3>
-        <span class="role">Praxisinhaber &amp; Physiotherapeut</span>
-        <p>Inhaber der Praxis und seit vielen Jahren mit Herz und Erfahrung in der Behandlung tätig.</p>
-        <!-- TEXT von Gunnar bestätigen: Tätigkeitsschwerpunkte / Werdegang -->
+        <span class="role">Praxisinhaber · Physiotherapeut · Zahntechniker</span>
+        <span class="born">Jahrgang 1961</span>
+        <div class="vita">
+          <h4>Fortbildungen</h4>
+          <ul>
+            <li>Brügger</li>
+            <li>Manuelle Therapie</li>
+            <li>PNF</li>
+            <li>Osteopathie</li>
+            <li>Craniosakraltherapie</li>
+            <li>Skoliose-Therapie</li>
+          </ul>
+        </div>
       </div>
 
       <div class="person reveal-l">
-        <h3>Monika Eichstädt</h3>
-        <span class="role">Physiotherapeutin &amp; Heilpraktikerin (Physiotherapie)</span>
-        <p>Langjährige Physiotherapeutin der Praxis – bekannt für ihre einfühlsame, gründliche Art.</p>
+        <h3>Monika Joanna Eichstädt</h3>
+        <span class="role">Physiotherapeutin · Heilpraktikerin für Physiotherapie · Fotografin</span>
+        <span class="born">Jahrgang 1969</span>
         <div class="vita">
-          <h4>Aus- &amp; Fortbildungen</h4>
-          <!-- HWG-Verpackung: Graubereich-Können hier als Qualifikation. Finale Liste nach Vita-PDF. -->
+          <h4>Fortbildungen</h4>
           <ul>
-            <li>Osteopathische &amp; Manuelle Techniken</li>
-            <li>Craniosacrale Verfahren</li>
-            <li>Kinesiologie</li>
-            <li>Fußreflexzonen</li>
-            <li>Manuelle Lymphdrainage</li>
-            <li>PNF &amp; Bobath</li>
-            <li class="hint">Vita wird nach Eingang der PDF final formuliert.</li>
+            <li>Fußreflexzonentherapie</li>
+            <li>Bobath</li>
+            <li>Reiki</li>
+            <li>Psychologische Kinesiologie</li>
+            <li>PNF</li>
+            <li>Tanztherapie</li>
+            <li>Ohr-Akupunktur</li>
           </ul>
         </div>
       </div>
@@ -519,17 +550,16 @@
       </div>
       <div class="step reveal-l">
         <h3>Rezept mitbringen</h3>
-        <p>Haben Sie eine Verordnung vom Arzt, bringen Sie sie einfach mit. Ohne Rezept behandeln wir Sie als Selbstzahler – auch das ist möglich.</p>
-        <span class="dur">Kasse &amp; privat</span>
+        <p>Zur ersten Behandlung bringen Sie Ihr Rezept vom Arzt mit. Krankenkasse oder privat.</p>
       </div>
       <div class="step reveal-l">
         <h3>Wir schauen genau hin</h3>
-        <p>Beim ersten Termin nehmen wir uns Zeit für Befund und Gespräch: Wo tut es weh, was ging früher leichter, was ist Ihr Ziel?</p>
+        <p>Beim ersten Termin nehmen wir uns Zeit für Befund und Gespräch.</p>
         <span class="dur">In Ruhe, ohne Hektik</span>
       </div>
       <div class="step reveal-l">
         <h3>Behandlung beginnt</h3>
-        <p>Sie bekommen eine Behandlung, die zu Ihnen passt – und Übungen für zu Hause, wenn sie Ihnen helfen. Nicht mehr, als Sie schaffen.</p>
+        <p>Sie bekommen eine individuell angepasste Behandlung.</p>
         <span class="dur">Immer dieselben Hände</span>
       </div>
     </div>
@@ -554,9 +584,9 @@
       <a href="tel:+494621953344" class="btn btn-light reveal-l"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>Hausbesuch anfragen</a>
     </div>
     <div class="frame par reveal-l">
-      <img src="assets/behandlung-haende.jpg" alt="Behandlung mit den Händen – Physiotherapie mit Ruhe und Zeit" width="900" height="900" loading="lazy" decoding="async">
+      <img src="assets/hero-roller.jpg" alt="Monika Eichstädt auf ihrem Roller – unterwegs zu einem Hausbesuch in Schleswig" width="1100" height="1375" loading="lazy" decoding="async" style="object-position:50% 70%">
       <div class="scrim"></div>
-      <div class="cap"><div class="k">Mit Ruhe und Zeit</div><div class="s">Behandlung in vertrauter Umgebung</div></div>
+      <div class="cap"><div class="k">Unterwegs zu Ihnen</div><div class="s">Monika Eichstädt auf dem Weg zum Hausbesuch</div></div>
     </div>
   </div>
 </section>
@@ -567,7 +597,7 @@
     <div>
       <div class="lead-head reveal" style="margin-bottom:34px;">
         <div class="rule"></div>
-        <h2>Ankommen,<br>ohne zu suchen</h2>
+        <h2>Einfach zu finden</h2>
         <p>Die Praxis liegt in der Heinrich-Hertz-Straße 40 in Schleswig.</p>
       </div>
       <ul class="weg">
@@ -578,23 +608,14 @@
         </li>
         <li class="reveal-l">
           <span class="ico"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></span>
-          <div><b>Wenn der Weg zu weit ist</b>
-          <span>Dann kommen wir zu Ihnen nach Hause. Sagen Sie am Telefon einfach Bescheid – wir richten es ein.</span></div>
-        </li>
-        <li class="reveal-l">
-          <span class="ico"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>
-          <div><b>Lieber vorher fragen?</b>
-          <span>Rufen Sie an, wir beschreiben Ihnen den Weg. <a href="tel:+494621953344">04621 953344</a></span></div>
+          <div><b>Wenn der Weg nicht möglich ist</b>
+          <span>Dann kommen wir zu Ihnen nach Hause.</span></div>
         </li>
       </ul>
     </div>
     <div class="gebiet reveal-l">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg>
       <h3>Hausbesuche in Schleswig<br>und Umgebung</h3>
-      <div class="orte">
-        <span>Schleswig</span><span>Busdorf</span><span>Fahrdorf</span>
-        <span>Jagel</span><span>Umgebung</span>
-      </div>
-      <p>Sie wohnen etwas weiter draußen? Fragen Sie trotzdem – <span class="ph-legal">Einzugsgebiet bitte bestätigen</span></p>
     </div>
   </div>
 </section>
@@ -607,34 +628,26 @@
         <div class="lead-head reveal" style="margin-bottom:6px;">
           <div class="rule"></div>
           <h2>So erreichen Sie uns</h2>
-          <p>Am schnellsten geht es telefonisch. Wir freuen uns auf Sie.</p>
+          <p>Anmeldungen telefonisch oder per WhatsApp. Wir freuen uns auf Sie.</p>
         </div>
         <div class="kinfo reveal-l">
           <a href="tel:+494621953344"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span> 04621 953344</a>
-          <!-- WhatsApp-Nummer bestätigen (aktuell Monika +49 1520 6184628) -->
           <a href="https://wa.me/4915206184628"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-chat"/></svg></span> WhatsApp schreiben</a>
           <div class="ki"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span> Heinrich-Hertz-Straße 40, 24837 Schleswig</div>
-          <!-- Instagram-Link einsetzen, sobald Profil öffentlich -->
-          <a href="#" id="ig-link"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg></span> Wir auf Instagram</a>
-        </div>
-        <div class="hours reveal-l">
-          <!-- ÖFFNUNGSZEITEN bestätigen -->
-          <div class="row"><span>Montag – Donnerstag</span><span>08:00 – 18:00 Uhr</span></div>
-          <div class="row"><span>Freitag</span><span>08:00 – 14:00 Uhr</span></div>
-          <div class="row"><span>Termine</span><span>nach Vereinbarung</span></div>
-          <div class="row warn"><span>⚠︎ Öffnungszeiten</span><span>noch bestätigen</span></div>
+          <a href="https://www.instagram.com/physioeichstaedt.schleswig/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg></span> @physioeichstaedt.schleswig</a>
         </div>
       </div>
       <div>
-        <h3 style="color:#fff;margin-bottom:16px;font-size:1.5rem;">Rückruf anfordern</h3>
-        <!-- Formspree mlgpooqw = VALORIS-Sammelpostfach → vor Live auf Praxis-Postfach umstellen -->
-        <form action="https://formspree.io/f/mlgpooqw" method="POST">
-          <div><label for="name">Ihr Name</label><input type="text" id="name" name="name" required></div>
-          <div><label for="tel">Telefonnummer</label><input type="tel" id="tel" name="telefon" required></div>
-          <div><label for="msg">Ihr Anliegen</label><textarea id="msg" name="nachricht" placeholder="Worum geht es? Wann erreichen wir Sie am besten?"></textarea></div>
-          <button type="submit" class="btn btn-primary" style="justify-content:center;width:100%;">Absenden</button>
-          <p class="form-note">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung Ihrer Anfrage zu. Details in der Datenschutzerklärung.</p>
-        </form>
+        <h3 class="reveal" style="color:#fff;margin-bottom:6px;font-size:1.5rem;">Kernöffnungszeiten</h3>
+        <!-- Öffnungszeiten von Frau Eichstädt (20.10.2026) -->
+        <div class="hours reveal-l">
+          <div class="row"><span>Montag</span><span>08:00 – 12:00 · 15:00 – 19:00</span></div>
+          <div class="row"><span>Dienstag</span><span>08:00 – 12:00 · 15:00 – 19:00</span></div>
+          <div class="row"><span>Mittwoch</span><span>08:00 – 12:00</span></div>
+          <div class="row"><span>Donnerstag</span><span>08:00 – 12:00 · 15:00 – 19:00</span></div>
+          <div class="row"><span>Freitag</span><span>08:00 – 12:00</span></div>
+        </div>
+        <p class="hours-note reveal-l"><b>Termine nach Vereinbarung</b> – auch außerhalb der Kernöffnungszeiten möglich.</p>
       </div>
     </div>
     <div class="map reveal-l" id="mapBox">
@@ -686,11 +699,11 @@
     <h3>Angaben gemäß § 5 TMG</h3>
     <p>Physiotherapie Eichstädt<br>Inhaber: Gunnar Eichstädt<br>Heinrich-Hertz-Straße 40<br>24837 Schleswig</p>
     <h3>Kontakt</h3>
-    <p>Telefon: 04621 953344<br>E-Mail: <span class="ph-legal">E-Mail-Adresse einsetzen</span></p>
+    <p>Telefon: 04621 953344<br>E-Mail: <a href="mailto:monikabiene@googlemail.com">monikabiene@googlemail.com</a></p>
     <h3>Berufsrechtliche Angaben</h3>
     <p><b>Gunnar Eichstädt</b><br>
        Berufsbezeichnung: Physiotherapeut (verliehen in der Bundesrepublik Deutschland)</p>
-    <p><b>Monika Eichstädt</b><br>
+    <p><b>Monika Joanna Eichstädt</b><br>
        Berufsbezeichnungen: Physiotherapeutin sowie Heilpraktikerin, beschränkt auf das Gebiet der Physiotherapie
        (beide verliehen in der Bundesrepublik Deutschland)</p>
     <p>Zuständige Aufsichtsbehörde:<br>
@@ -712,13 +725,15 @@
     <h2>Datenschutzerklärung</h2>
     <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG).</p>
     <h3>Verantwortlicher</h3>
-    <p>Gunnar Eichstädt · Physiotherapie Eichstädt · Heinrich-Hertz-Straße 40 · 24837 Schleswig · 04621 953344</p>
+    <p>Gunnar Eichstädt · Physiotherapie Eichstädt · Heinrich-Hertz-Straße 40 · 24837 Schleswig · 04621 953344 · monikabiene@googlemail.com</p>
     <h3>Kontaktaufnahme</h3>
-    <p>Wenn Sie uns per Formular, Telefon oder WhatsApp kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.</p>
+    <p>Wenn Sie uns per Telefon, E-Mail oder WhatsApp kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.</p>
     <h3>Gesundheitsdaten</h3>
     <p>Im Rahmen der Behandlung verarbeiten wir besondere Kategorien personenbezogener Daten (Gesundheitsdaten) gemäß Art. 9 Abs. 2 lit. h DSGVO. Diese werden vertraulich behandelt und unterliegen der Schweigepflicht.</p>
-    <h3>Kontaktformular (Formspree)</h3>
-    <p>Das Formular wird über den Dienst Formspree verarbeitet. <span class="ph-legal">Vor Live: auf Praxis-Postfach umstellen + AVV prüfen.</span></p>
+    <h3>WhatsApp</h3>
+    <p>Wenn Sie uns über WhatsApp schreiben, werden Ihre Nachricht und Telefonnummer von WhatsApp (Meta Platforms Ireland Ltd.) verarbeitet. Bitte senden Sie über WhatsApp keine ausführlichen Gesundheitsangaben – dafür rufen Sie uns besser an.</p>
+    <h3>Instagram</h3>
+    <p>Auf unser Instagram-Profil verlinken wir nur. Daten werden erst übertragen, wenn Sie den Link anklicken und Instagram öffnen.</p>
     <h3>Google Maps</h3>
     <p>Die Karte wird erst nach Ihrem Klick geladen. Dabei können Daten an Google übertragen werden.</p>
     <h3>Ihre Rechte</h3>
