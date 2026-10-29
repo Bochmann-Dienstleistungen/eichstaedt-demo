@@ -172,7 +172,7 @@
     padding:clamp(72px,10vw,132px) 0;position:relative;overflow:hidden;}
   .statement .wrap{max-width:1000px;}
   .statement .mark{font-family:'Newsreader',serif;font-size:clamp(4rem,11vw,8rem);line-height:.7;
-    color:var(--ochre);opacity:.4;display:block;height:.42em;margin-bottom:.32em;}
+    color:var(--ochre);opacity:.4;display:block;height:.42em;margin-bottom:.45em;}
   .statement p{font-family:'Newsreader',serif;font-size:clamp(1.7rem,3.5vw,2.9rem);line-height:1.28;
     color:var(--forest-deep);letter-spacing:-.012em;}
   .statement p em{font-style:italic;color:var(--ochre-d);}
@@ -476,9 +476,11 @@
 <!-- ============ STATEMENT ============ -->
 <section class="statement">
   <div class="wrap">
-    <span class="mark reveal">&bdquo;</span>
-    <p class="reveal">Manche Wege sind kurz. Manche gehen wir mit &ndash;
-       und wenn der Weg zu uns nicht möglich ist, <em>kommen wir eben zu Ihnen.</em></p>
+    <div class="q">
+      <span class="mark reveal">&bdquo;</span>
+      <p class="reveal">Manche Wege sind kurz. Manche gehen wir mit &ndash;
+         und wenn der Weg zu uns nicht möglich ist, <em>kommen wir eben zu Ihnen.</em></p>
+    </div>
     <div class="by reveal"><b>Mobile Physiotherapie nach dem Bobath&shy;konzept</b> &middot; Praxis Eichstädt, Schleswig</div>
   </div>
 </section>
@@ -810,7 +812,7 @@
         scrollTrigger:{trigger:fr,start:'top bottom',end:'bottom top',scrub:.8}});
     });
     // Statement-Band: der Satz zieht beim Scrollen sanft mit
-    gsap.utils.toArray('.statement p').forEach(el=>{
+    gsap.utils.toArray('.statement .q').forEach(el=>{
       gsap.fromTo(el,{y:24},{y:-24,ease:'none',
         scrollTrigger:{trigger:el.closest('.statement'),start:'top bottom',end:'bottom top',scrub:1}});
     });
