@@ -200,6 +200,10 @@
 
   /* ── Anfahrt & Parken: zwei ungleiche Spalten ── */
   .anfahrt{background:var(--bg-2);border-top:1px solid var(--line);}
+  .anfahrt .side{display:flex;flex-direction:column;gap:26px;}
+  .hausfoto{position:relative;margin:0;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(23,40,34,.45);}
+  .hausfoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%;display:block;}
+  .hausfoto::after{content:"";position:absolute;inset:14px;border:1.5px solid rgba(191,132,58,.55);border-radius:12px;pointer-events:none;}
   .anfahrt .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,72px);align-items:start;}
   .weg{list-style:none;}
   .weg li{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:flex-start;}
@@ -613,9 +617,14 @@
         </li>
       </ul>
     </div>
-    <div class="gebiet reveal-l">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg>
-      <h3>Hausbesuche in Schleswig<br>und Umgebung</h3>
+    <div class="side">
+      <figure class="hausfoto reveal-l">
+        <img src="assets/praxis-haus.jpg" alt="Eingang der Praxis Eichstädt in der Heinrich-Hertz-Straße 40 in Schleswig mit Praxisschild und Parkplätzen davor" width="1400" height="1050" loading="lazy" decoding="async">
+      </figure>
+      <div class="gebiet reveal-l">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg>
+        <h3>Hausbesuche in Schleswig<br>und Umgebung</h3>
+      </div>
     </div>
   </div>
 </section>
