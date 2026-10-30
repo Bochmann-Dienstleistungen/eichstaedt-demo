@@ -31,5 +31,6 @@ Sie ist **noch nicht deployed** — bewusst, bis die vier Punkte unten geklärt 
 ## Beim Deploy nicht vergessen
 
 - Domain `physiotherapie-eichstaedt.de` bei Strato registrieren. **Inhaber/Admin-C = Gunnar Eichstädt**, Tech-C = Frederic. DENIC-Bestätigungsmail muss binnen 14 Tagen geklickt werden → braucht ebenfalls die Praxis-E-Mail.
+- **`og:image` auf die echte Domain umstellen** — steht aktuell auf der github.io-Adresse (Kommentar im `<head>` markiert die Stelle).
 - Bei einer reinen Vorschau vor Abnahme: `<meta name="robots">` auf `noindex, nofollow` setzen und `robots.txt` mit `Disallow: /` beilegen. Zum echten Live-Gang wieder auf `index, follow`.
 - Restzahlung 495 € (Rest zu VTR-2026-003) erst nach Abnahme.
